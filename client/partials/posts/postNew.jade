@@ -1,0 +1,12 @@
+h2.postTitle Write a new post
+form(name='form', novalidate)
+  div(ng-class='{error: form.title.$invalid && !form.title.$pristine}')
+    label(for='title') Title:
+    input(ng-model='post.title', name='title', required)
+    div(ng-show='form.title.$error.required && !form.title.$pristine') Title is required
+  div(ng-class='{error: form.content.$invalid && !form.content.$pristine}')
+    p Conent:
+    textarea(ng-model='post.content', name='content', cols='50', rows='15', required)
+    div(ng-show='form.content.$error.required && !form.content.$pristine') Content is required
+    p
+      button(ng-click='submitPost()', ng-disabled='form.$invalid') Submit Post
