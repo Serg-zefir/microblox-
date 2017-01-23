@@ -1,7 +1,7 @@
 extends layout
 
 block body
-  h1#title Mongo/Express/Angular Blog
+  h1#title Mon/Exp/Ang Blog
   ul#navbar
     li.navItem
       a(href='/') home
@@ -12,7 +12,11 @@ block body
 
   div
     div(ng-view)
-
-  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js')
-  script(src='js/partials.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.11/angular-route.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.11/angular-resource.js')
   script(src='js/app.js')
+  script(src='js/controllers/posts.js')
+  script(src='js/services/posts.js')
+  

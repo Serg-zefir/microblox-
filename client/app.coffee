@@ -1,7 +1,6 @@
 angular.module('blogger', [
   'ngRoute',
-  'blogger.controllers', 'blogger.services',
-  'partials'
+  'blogger.controllers', 'blogger.services'
 ])
 .config ($routeProvider, $locationProvider) ->
   $routeProvider

@@ -1,7 +1,7 @@
 ul#posts
   li(ng-repeat='post in posts | filter:search')
     h3.postTitle {{post.title}}
-    p {{post.content}}
+    p {{post.body}}
     a(href="post/{{post['_id']}}")  show
     span   /\/
     a(href="post/edit/{{post['_id']}}")  edit

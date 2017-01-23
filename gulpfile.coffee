@@ -48,7 +48,7 @@ gulp.task 'client', ->
   .pipe pl.coffeelint max_line_length: level: 'ignore'
   .pipe pl.coffeelint.reporter()
   .pipe pl.coffee()
-  .pipe pl.uglify()
+  #.pipe pl.uglify()
   .pipe gulp.dest kuda.out.js
   .on 'end', ->
     console.log 'Client JS build!'.bold.cyan
