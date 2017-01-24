@@ -1,9 +1,5 @@
-ul#posts
+ul.border#posts
   li(ng-repeat='post in posts | filter:search')
+    span.date {{post.cdate | date:"MMM d, y"}}
     h3.postTitle {{post.title}}
-    p {{post.body}}
-    a(href="post/{{post['_id']}}")  show
-    span   /\/
-    a(href="post/edit/{{post['_id']}}")  edit
-    span   /\/
-    a(href='', ng-click="removePost(post['_id'])")  remove
+    a.button.orange.glossy.drop.sm(href="post/{{post['_id']}}")  to details...

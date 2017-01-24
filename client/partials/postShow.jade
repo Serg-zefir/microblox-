@@ -1,4 +1,10 @@
 h2.postTitle {{post.title}}
-p {{post.cdate}}
-div {{post.body}}
-button(ng-click='removePost()') Remove
+p.date {{post.cdate | date:"MMM d, y 'at' H:mm"}}
+div
+  div.work
+    div.ed
+      a(href="post/edit/{{post['_id']}}")  edit
+    div.rm
+      a(href='', ng-click="removePost(post['_id'])")  remove
+  div.cnt {{post.body}}
+//- button(ng-click='removePost()') Remove
