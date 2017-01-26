@@ -4,11 +4,10 @@
   "description": "microBloge of node.js/angular.js",
   "scripts": {
     "bld": "gulp build",
-    "start": "concurrently -c \"bold.yellow,green.dim\" \"npm run srvr\" \"npm run gu\" ",
+    "start": "concurrently -c \"bold.yellow,green.dim\" \"npm run gu\" \"npm run srvr\" ",
     "srvr": "node web/server.js",
-    "gu": "gulp",
-    "mocha": "node tools/test/run-mocha.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gu": "./node_modules/.bin/gulp",
+    "test": "./node_modules/.bin/mocha"
   },
   "author": {
     "name": "Serg Takij",
@@ -23,11 +22,8 @@
     "del": "^2.2.2",
     "expect": "^1.20.2",
     "gulp": "^3.9.0",
-    "gulp-angular-filesort": "^1.1.0",
-    "gulp-angular-templatecache": "^2.0.0",
     "gulp-coffee": "^2.3.3",
     "gulp-coffeelint": "^0.6.0",
-    "gulp-connect": "^5.0.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-flatten": "^0.3.1",
     "gulp-if": "^2.0.2",
@@ -37,7 +33,8 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^2.0.0",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
   },
   "dependencies": {
     "express": "^4.14.0",

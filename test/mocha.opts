@@ -1,0 +1,5 @@
+--compilers coffee:coffee-script/register
+--growl
+--slow 20
+--timeout 2000
+--recursive
